@@ -32,3 +32,9 @@ jobs:
         with:
           name: app-debug
           path: app/build/outputs/apk/debug/app-debug.apk
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+        with:
+          cache: true
+          cache-key: android-sdk-${{ runner.os }}
+          ndk-version: null
